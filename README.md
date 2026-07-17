@@ -10,6 +10,7 @@ A small browser extension for Destiny Item Manager (DIM) that adds a green debug
 4. Select the `Dim Enhance` folder containing this project.
 5. The extension should appear as `DIM Weapon Roll Companion`.
 
+<img width="1292" height="832" alt="2026-07-17_2001707" src="https://github.com/user-attachments/assets/f0eaf173-5bb4-431c-9000-03ca3347d9a0" />
 
 
 ## How to use
@@ -19,6 +20,7 @@ A small browser extension for Destiny Item Manager (DIM) that adds a green debug
 3. Click perks in the DIM roll UI to select them.
 4. The overlay displays selected perks per column.
 5. Click `Copy` to copy the generated output to your clipboard.
+<img width="1113" height="951" alt="2026-07-17_2004707" src="https://github.com/user-attachments/assets/a07f6dfa-4cd6-434a-a6b1-6b968422186a" />
 
 ## Output format
 
