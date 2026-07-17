@@ -9,7 +9,7 @@ A small browser extension for Destiny Item Manager (DIM) that adds a green debug
 3. Click `Load unpacked`.
 4. Select the `Dim Enhance` folder containing this project.
 5. The extension should appear as `DIM Weapon Roll Companion`.
-   <img width="1412" height="745" alt="2026-07-17_1957661" src="https://github.com/user-attachments/assets/f4590808-3a77-44dc-9f08-6ad753f1495b" />
+
 
 
 ## How to use
