@@ -16,6 +16,7 @@ function applyArmoryRectStyles(rect) {
   rect.style.fontWeight = 'bold';
   rect.style.userSelect = 'text';
 
+  const inverseWeaponIconUrl = chrome.runtime.getURL('Asset/broken-heart.png');
   const style = document.createElement('style');
   style.textContent = `
     .${ARMORY_RECT_CLASS} .armory-copy-button {
@@ -31,6 +32,17 @@ function applyArmoryRectStyles(rect) {
 
     .${ARMORY_RECT_CLASS} .armory-copy-button:hover {
       background: rgba(255, 255, 255, 0.25);
+    }
+
+    .inverse-weapon {
+      background-color: green;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .${ARMORY_RECT_CLASS} .armory-copy-row {

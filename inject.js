@@ -207,6 +207,78 @@ function attachChildClickListeners(card, rect) {
   });
 }
 
+function ensureInverseQueryButton() {
+  const container = document.querySelector('#temp-container > div > div:nth-child(1) > div > div.WDlrbzPo > div');
+  if (!container) return;
+
+  let button = container.querySelector('button.inverse-weapon');
+  if (!button) {
+    button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'RMJmuSye o3oKAnUN riJK1dNz inverse-weapon';
+    button.title = 'Inverse Query';
+    button.setAttribute('aria-keyshortcuts', 'i');
+
+    const img = document.createElement('img');
+    img.src = chrome.runtime.getURL('Asset/broken-heart.png');
+    img.alt = 'Inverse Query';
+    img.style.width = '18px';
+    img.style.height = '18px';
+    button.appendChild(img);
+
+    button.dataset.inverseQueryListenerAttached = 'true';
+    button.addEventListener('click', () => {
+      const label = document.querySelector('#temp-container > div > div:nth-child(1) > div > div.gi12X5mX.wB8P8rVg > div.DJShGPgK > button > h1 > span');
+      if (!label) return;
+
+      const text = label.textContent.trim().toLowerCase();
+      const clipboardText = `exactname:"${text}" -(tag:keep or tag:favorite)`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clipboardText).catch(() => fallbackCopyText(clipboardText));
+      } else {
+        fallbackCopyText(clipboardText);
+      }
+    });
+
+    container.appendChild(button);
+  } else if (!button.dataset.inverseQueryListenerAttached) {
+    button.dataset.inverseQueryListenerAttached = 'true';
+    button.addEventListener('click', () => {
+      const label = document.querySelector('#temp-container > div > div:nth-child(1) > div > div.gi12X5mX.wB8P8rVg > div.DJShGPgK > button > h1 > span');
+      if (!label) return;
+
+      const text = label.textContent.trim().toLowerCase();
+      const clipboardText = `exactname:"${text}" -(tag:keep or tag:favorite)`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clipboardText).catch(() => fallbackCopyText(clipboardText));
+      } else {
+        fallbackCopyText(clipboardText);
+      }
+    });
+  }
+
+  const isOnlyUl = container.classList.length === 1 && container.classList.contains('Ul_ZE389');
+  const hasBothUlAndLc = container.classList.contains('Ul_ZE389') && container.classList.contains('Lc2WXhl2');
+  const span = button.querySelector('span.US8Iulse');
+
+  if (isOnlyUl && !span) {
+    const tag = document.createElement('span');
+    tag.className = 'US8Iulse';
+    tag.textContent = 'Not Tagged';
+    button.appendChild(tag);
+  }
+
+  if (!isOnlyUl && span) {
+    span.remove();
+  }
+
+  if (hasBothUlAndLc && span) {
+    span.remove();
+  }
+}
+
 function injectIntoArmoryCard() {
   const armoryCards = getArmoryCards();
 
@@ -222,6 +294,8 @@ function injectIntoArmoryCard() {
     attachPerkClickListeners(card, rect);
     attachCopyButton(card, rect);
   });
+
+  ensureInverseQueryButton();
 }
 
 function getTooltipPerkName() {

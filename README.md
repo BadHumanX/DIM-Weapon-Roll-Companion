@@ -1,7 +1,10 @@
 # DIM Weapon Roll Companion
 
-A small browser extension for Destiny Item Manager (DIM) that adds a green debug overlay to weapon rolls and lets you copy the selected perk output in a search-friendly format.
+A small browser extension for Destiny Item Manager (DIM) that adds quick DIM serch Qeury to clipboard
+    1. Weapon Inverse (this copy to cliboar a query for teh selected weapon + -(-(tag:keep or tag:favorite)))
 
+    2. Weapon Rolls (just click on the weapon rolls of or you taste) for any columns of you taste(limited to 1 roll for column 1,2 & 5 Columns) and 3 selection per column on column 3 & 4
+.
 ## Installation
 
 1. Open Chrome or Edge and go to `chrome://extensions` or `edge://extensions`.
