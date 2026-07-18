@@ -3,7 +3,10 @@
 A small browser extension for Destiny Item Manager (DIM) that adds quick DIM search query copy to clipboard.
 
 1. Weapon Inverse (this copies a query for the selected weapon + -(tag:keep or tag:favorite))
+   <img width="556" height="770" alt="image" src="https://github.com/user-attachments/assets/4b5d8817-62b3-4b79-9e43-ac1ebec35f5d" />
+
 2. Weapon Rolls (click weapon rolls for your chosen columns; limited to 1 roll for columns 1, 2 & 5 and 3 selections per column for columns 3 & 4).
+   <img width="1113" height="951" alt="2026-07-17_2004707" src="https://github.com/user-attachments/assets/a07f6dfa-4cd6-434a-a6b1-6b968422186a" />
 
 ## Installation
 
@@ -23,7 +26,7 @@ A small browser extension for Destiny Item Manager (DIM) that adds quick DIM sea
 3. Click perks in the DIM roll UI to select them.
 4. The overlay displays selected perks per column.
 5. Click `Copy` to copy the generated output to your clipboard.
-<img width="1113" height="951" alt="2026-07-17_2004707" src="https://github.com/user-attachments/assets/a07f6dfa-4cd6-434a-a6b1-6b968422186a" />
+
 
 ## Output format
 
