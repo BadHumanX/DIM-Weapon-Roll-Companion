@@ -22,7 +22,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["Asset/broken-heart.png"],
+      "resources": ["Asset/skull.png"],
       "matches": ["https://app.destinyitemmanager.com/*"]
     }
   ]

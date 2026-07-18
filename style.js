@@ -16,7 +16,7 @@ function applyArmoryRectStyles(rect) {
   rect.style.fontWeight = 'bold';
   rect.style.userSelect = 'text';
 
-  const inverseWeaponIconUrl = chrome.runtime.getURL('Asset/broken-heart.png');
+  const inverseWeaponIconUrl = chrome.runtime.getURL('Asset/skull.png');
   const style = document.createElement('style');
   style.textContent = `
     .${ARMORY_RECT_CLASS} .armory-copy-button {

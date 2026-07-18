@@ -50,3 +50,7 @@ A small browser extension for Destiny Item Manager (DIM) that adds quick DIM ser
 
 - The extension is intended for personal use and development/testing in DIM.
 - There is no backend or external dependency besides the browser and DIM site.
+
+## Attribution
+
+- Thanks to RIkas Dzihab for the skull icon on <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Flaticon</a>.

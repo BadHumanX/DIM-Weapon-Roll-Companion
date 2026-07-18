@@ -220,7 +220,7 @@ function ensureInverseQueryButton() {
     button.setAttribute('aria-keyshortcuts', 'i');
 
     const img = document.createElement('img');
-    img.src = chrome.runtime.getURL('Asset/broken-heart.png');
+    img.src = chrome.runtime.getURL('Asset/skull.png');
     img.alt = 'Inverse Query';
     img.style.width = '18px';
     img.style.height = '18px';
