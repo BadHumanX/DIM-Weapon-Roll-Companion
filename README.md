@@ -1,6 +1,6 @@
 # DIM Weapon Roll Companion
 
-A small browser extension for Destiny Item Manager (DIM) that adds quick DIM search query copy to clipboard.
+A userscript for Destiny Item Manager (DIM) that adds quick DIM search query copy to clipboard.
 
 1. Weapon Inverse (this copies a query for the selected weapon + -(tag:keep or tag:favorite))
    <img width="556" height="770" alt="image" src="https://github.com/user-attachments/assets/4b5d8817-62b3-4b79-9e43-ac1ebec35f5d" />
@@ -10,23 +10,19 @@ A small browser extension for Destiny Item Manager (DIM) that adds quick DIM sea
 
 ## Installation
 
-1. Open Chrome or Edge and go to `chrome://extensions` or `edge://extensions`.
-2. Enable `Developer mode` in the top right.
-3. Click `Load unpacked`.
-4. Select the `Dim Enhance` folder containing this project.
-5. The extension should appear as `DIM Weapon Roll Companion`.
-
-<img width="1292" height="832" alt="2026-07-17_2001707" src="https://github.com/user-attachments/assets/f0eaf173-5bb4-431c-9000-03ca3347d9a0" />
-
+1. Install a userscript manager like **Tampermonkey** in your browser (Chrome, Edge, Firefox, Safari, etc.).
+2. Click the Tampermonkey extension icon and select **Create a new script...**
+3. Copy and paste the entire contents of the `dim-weapon-roll-companion.user.js` file from this project into the editor.
+4. Save the script (Ctrl+S or File -> Save).
+5. Open or refresh `https://app.destinyitemmanager.com/` to use the companion.
 
 ## How to use
 
 1. Open `https://app.destinyitemmanager.com/` and select a weapon card.
-2. The extension injects a green overlay panel into the weapon card view.
+2. The script injects a green overlay panel into the weapon card view.
 3. Click perks in the DIM roll UI to select them.
 4. The overlay displays selected perks per column.
 5. Click `Copy` to copy the generated output to your clipboard.
-
 
 ## Output format
 
@@ -35,8 +31,9 @@ A small browser extension for Destiny Item Manager (DIM) that adds quick DIM sea
 
 ## Files
 
-- `manifest.json` - extension metadata and content script configuration.
-- `constants.js` - selectors and class names used across the extension.
+- `dim-weapon-roll-companion.user.js` - consolidated Tampermonkey userscript containing the full functionality.
+- `manifest.json` - extension metadata and content script configuration (for browser extension mode).
+- `constants.js` - selectors and class names used across the script.
 - `selectors.js` - DOM query helpers for DIM card elements.
 - `style.js` - injected overlay styling.
 - `inject.js` - main logic for creating the overlay, handling perk selection, and copying output.
@@ -45,13 +42,13 @@ A small browser extension for Destiny Item Manager (DIM) that adds quick DIM sea
 
 ## Dependencies
 
-- No external npm packages are required.
-- This is a Manifest V3 browser extension, so it works in Chrome and Edge.
-- It requires access to `https://app.destinyitemmanager.com/*`.
+- No external npm packages or external asset networks are required.
+- The userscript embeds the skull icon asset directly as a Base64 data URL.
+- It requires a userscript manager and access to `https://app.destinyitemmanager.com/*`.
 
 ## Notes
 
-- The extension is intended for personal use and development/testing in DIM.
+- The companion is intended for personal use and development/testing in DIM.
 - There is no backend or external dependency besides the browser and DIM site.
 
 ## Attribution
