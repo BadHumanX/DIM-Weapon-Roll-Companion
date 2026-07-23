@@ -32,13 +32,7 @@ A userscript for Destiny Item Manager (DIM) that adds quick DIM search query cop
 ## Files
 
 - `dim-weapon-roll-companion.user.js` - consolidated Tampermonkey userscript containing the full functionality.
-- `manifest.json` - extension metadata and content script configuration (for browser extension mode).
-- `constants.js` - selectors and class names used across the script.
-- `selectors.js` - DOM query helpers for DIM card elements.
-- `style.js` - injected overlay styling.
-- `inject.js` - main logic for creating the overlay, handling perk selection, and copying output.
-- `observer.js` - observes DOM changes and injects the overlay when new cards appear.
-- `content.js` - unused or placeholder content script file.
+- `README.md` - documentation and installation instructions.
 
 ## Dependencies
 
