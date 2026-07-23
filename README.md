@@ -31,7 +31,8 @@ A userscript for Destiny Item Manager (DIM) that adds quick DIM search query cop
 
 ## Files
 
-- `dim-weapon-roll-companion.user.js` - consolidated Tampermonkey userscript containing the full functionality.
+- `dim-weapon-roll-companion.user.js` - consolidated Tampermonkey userscript for weapon roll companions.
+- `dim-weapon-wrapper.user.js` - standalone Tampermonkey userscript to wrap and restyle weapon containers.
 - `README.md` - documentation and installation instructions.
 
 ## Dependencies
