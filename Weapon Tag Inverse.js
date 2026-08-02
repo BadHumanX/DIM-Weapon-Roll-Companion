@@ -37,6 +37,20 @@
     document.body.removeChild(textarea);
   }
 
+  function pasteInverseQuery(query) {
+    const input = document.querySelector('#downshift-_r_e_-input');
+    if (!input) return;
+
+    input.focus();
+    input.value = query;
+
+    const events = ['input', 'change'];
+    events.forEach(type => {
+      const event = new Event(type, { bubbles: true });
+      input.dispatchEvent(event);
+    });
+  }
+
   function ensureInverseQueryButton() {
     const container = document.querySelector('#temp-container > div > div:nth-child(1) > div > div.WDlrbzPo > div');
     if (!container) return;
@@ -62,13 +76,8 @@
         if (!label) return;
 
         const text = label.textContent.trim().toLowerCase();
-        const clipboardText = `exactname:"${text}" -(tag:keep or tag:favorite)`;
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(clipboardText).catch(() => fallbackCopyText(clipboardText));
-        } else {
-          fallbackCopyText(clipboardText);
-        }
+        const query = `exactname:"${text}" -(tag:keep or tag:favorite)`;
+        pasteInverseQuery(query);
       });
 
       container.appendChild(button);
@@ -79,13 +88,8 @@
         if (!label) return;
 
         const text = label.textContent.trim().toLowerCase();
-        const clipboardText = `exactname:"${text}" -(tag:keep or tag:favorite)`;
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(clipboardText).catch(() => fallbackCopyText(clipboardText));
-        } else {
-          fallbackCopyText(clipboardText);
-        }
+        const query = `exactname:"${text}" -(tag:keep or tag:favorite)`;
+        pasteInverseQuery(query);
       });
     }
 
